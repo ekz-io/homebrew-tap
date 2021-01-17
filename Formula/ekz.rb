@@ -5,16 +5,16 @@
 class Ekz < Formula
   desc "The command line for EKZ"
   homepage "https://github.com/chanwit/ekz/"
-  version "0.0.4"
+  version "0.0.5"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/chanwit/ekz/releases/download/v0.0.4/ekz_0.0.4_darwin_amd64.tar.gz"
-    sha256 "4151caf2b4d80f3f77dd871a7df8e97136ee833d8ae60e124d000de36d2f6516"
+    url "https://github.com/chanwit/ekz/releases/download/v0.0.5/ekz_0.0.5_darwin_amd64.tar.gz"
+    sha256 "39b8c8d6de9ea879f6c73a3b8aadd4ad27aaf4c94de17066616404b697d703a4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/chanwit/ekz/releases/download/v0.0.4/ekz_0.0.4_linux_amd64.tar.gz"
-    sha256 "769d7d1c06f36b77a31e28d0ba50870f2ebc687fea5438de27dbdbefa6e96d4b"
+    url "https://github.com/chanwit/ekz/releases/download/v0.0.5/ekz_0.0.5_linux_amd64.tar.gz"
+    sha256 "2bb13445c3e765cc7cfa771af79d51b4e83903e072a93c76b2465a1e3eed51d0"
   end
 
   depends_on "kubectl" => :optional
