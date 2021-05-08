@@ -5,20 +5,20 @@
 class Ekz < Formula
   desc "The command line for EKZ, an EKS-D Kubernetes distro."
   homepage "https://github.com/chanwit/ekz/"
-  version "0.3.5"
+  version "0.4.0-rc.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/chanwit/ekz/releases/download/v0.3.5/ekz_0.3.5_darwin_amd64.tar.gz"
-    sha256 "6f659d548995de84bc3aec4cb1fe45e00db0e35490e86cf3b7926cfb5ea51ffd"
+    url "https://github.com/chanwit/ekz/releases/download/v0.4.0-rc.0/ekz_0.4.0-rc.0_darwin_amd64.tar.gz"
+    sha256 "f54d3c9a5d36fa9d2a3cd4076981609ca88d3da476299e3af54c096c677483b8"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/chanwit/ekz/releases/download/v0.3.5/ekz_0.3.5_darwin_arm64.tar.gz"
-    sha256 "236e9f73a5c7ac25bc4adcbe749d2a09cdf5d611ede4be50884ece7b0f466557"
+    url "https://github.com/chanwit/ekz/releases/download/v0.4.0-rc.0/ekz_0.4.0-rc.0_darwin_arm64.tar.gz"
+    sha256 "15301e0e7cc02ce15dd820a7dfcc33cb01d89ef6faf8b836c06ba4804a2f13d3"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/chanwit/ekz/releases/download/v0.3.5/ekz_0.3.5_linux_amd64.tar.gz"
-    sha256 "7d02ffb45592e8bdb34f4f5a25d6b3d289a3caf3c7b9e45f785bccf468108375"
+    url "https://github.com/chanwit/ekz/releases/download/v0.4.0-rc.0/ekz_0.4.0-rc.0_linux_amd64.tar.gz"
+    sha256 "8b009f6ab56fc71778b1e23f337f4b0796974fac0e6a619a8a5fb12c1a20bbcb"
   end
 
   depends_on "kubectl" => :optional
