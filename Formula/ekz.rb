@@ -5,20 +5,25 @@
 class Ekz < Formula
   desc "The command line for EKZ, an EKS-D Kubernetes distro."
   homepage "https://github.com/chanwit/ekz/"
-  version "0.5.2"
+  version "0.6.0-rc.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/chanwit/ekz/releases/download/v0.5.2/ekz_0.5.2_darwin_amd64.tar.gz"
-    sha256 "690a8895fc2cff9a4cbedc05ff0a515ef3285ef6174af0d77482beee649f93f0"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/chanwit/ekz/releases/download/v0.6.0-rc.0/ekz_0.6.0-rc.0_darwin_amd64.tar.gz"
+      sha256 "70efb45fa2ef044d2fb520a64adfaccd4341988a4cc9dbe5865272509281dd96"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/chanwit/ekz/releases/download/v0.6.0-rc.0/ekz_0.6.0-rc.0_darwin_arm64.tar.gz"
+      sha256 "dbfbc1665f6428771dbf63b16cba10cb39a9c676df6e9f0cee0b9e9da170c704"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/chanwit/ekz/releases/download/v0.5.2/ekz_0.5.2_darwin_arm64.tar.gz"
-    sha256 "2e765f0df3c2dc104155723505e52a062e08dbc8e1dd6b1a7bab1fea1512df5a"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/chanwit/ekz/releases/download/v0.5.2/ekz_0.5.2_linux_amd64.tar.gz"
-    sha256 "826a11c6c90890005a8639221e88549c381ff57916ed60ecc0f64f5d553630bf"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/chanwit/ekz/releases/download/v0.6.0-rc.0/ekz_0.6.0-rc.0_linux_amd64.tar.gz"
+      sha256 "37a99b1263ccfcd4ff54305c51c57c8fc7849448e5a0b1d4c43e1e014f70620d"
+    end
   end
 
   depends_on "kubectl" => :optional
